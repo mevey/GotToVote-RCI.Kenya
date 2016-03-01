@@ -19,7 +19,7 @@ Future versions of the site will introduce SMS tools, and will help users verify
 
 GotToVote! {{ site.country }} is not a government website. It was instead built by local civic lab <a href="http://www.codeforkenya.org/" target="_blank">Code for Kenya</a> and the continental open data incubator, <a href="http://www.codeforafrica.org" target="_blank">Code for Africa</a>.
 
-This project took just two days and $500 to execute. All the cleaned-up data and source materials used to power this website are available, free-of-charge, for you to reuse on your own projects.
+This project took just three days and $500 to execute. All the cleaned-up data and source materials used to power this website are available, free-of-charge, for you to reuse on your own projects.
 
 <a href="mailto:info@codeforafrica.org" target="_blank">Contact us</a> if you'd like our help to build other exciting citizen tools.
 
@@ -34,7 +34,7 @@ The first version of GotToVote, was originally built in just 24hrs, at zero cost
  
 “The file was so big, it would have taken days for ordinary Kenyans to download. And, once they opened the document all they would have found was complex lists and tables of constituency registration centres. These elections are a tight race, and every vote counts. So, we knew that the information was simply too important to be ignored,” explains Open Institute executive director, Jay Bhalla.
 
-Two Code for Kenya fellows, David Lemayian and Simeon Oriko, therefore scraped the data out of the IBEC document and built a simple website for citizens to find their registration centre at the click of a button. The website also helped citizens understand the often complex procedures for registering. The site went viral. 
+Two Code for Kenya fellows, David Lemayian and Simeon Oriko, therefore scraped the data out of the IEBC document and built a simple website for citizens to find their registration centre at the click of a button. The website also helped citizens understand the often complex procedures for registering. The site went viral. 
  
  These early successes prompted Dutch human rights organisation, HiVOS, to make a grant to the project to build additional functionality, as well as to package GotToVote and other useful civic technology tools into a ‘plug-&amp;-play’ resource kit for media and citizen groups in other countries.   
 
