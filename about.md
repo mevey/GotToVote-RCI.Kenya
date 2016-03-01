@@ -19,7 +19,7 @@ Future versions of the site will introduce SMS tools, and will help users verify
 
 GotToVote! {{ site.country }} is not a government website. It was instead built by local civic lab <a href="http://www.codeforkenya.org/" target="_blank">Code for Kenya</a> and the continental open data incubator, <a href="http://www.codeforafrica.org" target="_blank">Code for Africa</a>.
 
-This project took just three days and $500 to execute. All the cleaned-up data and source materials used to power this website are available, free-of-charge, for you to reuse on your own projects.
+This project took just three days and $500 to execute. All the cleaned-up data and source materials used to power this website are available, free-of-charge, for you to reuse on your own projects <a href="http://africaopendata.org/dataset/voter-registration-2016" target="_blank">here (data)</a> and <a href="http://github.com/CodeForAfrica/GotToVote-RCI.Kenya" target="_blank">here (source code)</a>.
 
 <a href="mailto:info@codeforafrica.org" target="_blank">Contact us</a> if you'd like our help to build other exciting citizen tools.
 
