@@ -130,11 +130,11 @@ const_sel.onchange = function () {
       $("#reg-centres").html($("#reg-centres").html() +
           "<tr><td><p>" + toTitleCase(ward_reg_name[i]) + "</p></td></tr>");
     }
-    $("#other-centres").html("");
-    for (var i = 0; i < centre_code.length; i++) {
-      $("#other-centres").html($("#other-centres").html() +
-          "<tr><td><p>" + toTitleCase(centre_name[i]) + "</p></td></tr>");
-    }
+    // $("#other-centres").html("");
+    // for (var i = 0; i < centre_code.length; i++) {
+    //   $("#other-centres").html($("#other-centres").html() +
+    //       "<tr><td><p>" + toTitleCase(centre_name[i]) + "</p></td></tr>");
+    // }
 
     header_name.innerHTML = unescape(toTitleCase(escape(ward_name[0]))) + " Ward";
   }
@@ -178,11 +178,11 @@ ward_sel.onchange = function () {
       $("#reg-centres").html($("#reg-centres").html() +
           "<tr><td><p>" + toTitleCase(ward_reg_name[i]) + "</p></td></tr>");
     }
-    $("#other-centres").html("");
-    for (var i = 0; i < centre_code.length; i++) {
-      $("#other-centres").html($("#other-centres").html() +
-          "<tr><td><p>" + toTitleCase(centre_name[i]) + "</p></td></tr>");
-    }
+    // $("#other-centres").html("");
+    // for (var i = 0; i < centre_code.length; i++) {
+    //   $("#other-centres").html($("#other-centres").html() +
+    //       "<tr><td><p>" + toTitleCase(centre_name[i]) + "</p></td></tr>");
+    // }
 
     header_name.innerHTML = unescape(toTitleCase(escape(ward_sel.options[ward_sel.selectedIndex].text))) + " Ward";
   }
