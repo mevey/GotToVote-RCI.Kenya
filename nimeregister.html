@@ -1,0 +1,131 @@
+---
+layout: page_blank
+title: Nimeregister
+nimeregister: active
+
+custom_js:
+  - vendor/watermark
+  - gtv-nimeregister
+---
+
+<div id="tweets" class="tweets"></div>
+<div style="text-align: center; margin-top: 7px;">
+  <p class="lead" style="padding: 10px 20px 15px; color: #333; background: #fff; display: inline; border-radius: 0 0 10px 10px; cursor: pointer;" onclick="javascript:window.open('https://twitter.com/search?q=%23nimeregister','_blank');">
+    <img src="img/social/tw-icon.png" alt="" style="height: 20px; margin-top: -5px;"/> #nimeregister
+  </p>
+</div>
+
+<a name="badge" id="badge"></a>
+
+<div style="padding: 40px 0 0;" class="text-center">
+  <h1>Nimeregister Profile Badge</h1>
+  <p class="lead">Get your Nimeregister profile badge today! It's easy.</p>
+
+  <div class="row" style="margin-top: 40px;">
+    <div class="col-md-10 col-md-offset-1">
+
+      <div class="well" id="twitter-user" style="color: #333; padding-bottom: 50px; margin-bottom: -20px;">
+        <p style="margin-top: 20px;">
+          <!-- Watermark Image -->
+          <img src="/img/nimeregister/portraits/ex1.png" alt="" height="100px" width="100px" class="img-polaroid" id="src_image" style="margin: 5px 0; max-width: 45%;" />
+          <i class="fa fa-arrow-right fa-2x"></i>
+          <img src="/img/nimeregister/portraits/ex1.png" alt="" height="auto" width="180px" class="img-polaroid watermark" id="wm_image" style="max-width: 45%;" />
+        </p>
+        
+        <ul class="nav nav-pills" style="margin: 10px auto 0; display: inline-block;">
+          <li id="wm-tl"><a href="javascript:wm_top_left();"><small>Top Left</small></a></li>
+          <li id="wm-tr"><a href="javascript:wm_top_right();"><small>Top Right</small></a></li>
+          <li id="wm-br"><a href="javascript:wm_bottom_right();"><small>Bottom Right</small></a></li>
+          <li id="wm-bl"><a href="javascript:wm_bottom_left();"><small>Bottom Left</small></a></li>
+        </ul>
+        
+        <hr style="width: 50%; margin: 20px auto;"/>
+        
+        <div class="btn-group" role="group" data-toggle="buttons">
+          <label class="btn btn-primary active" onclick="javascript:$('#badgeCarousel').carousel(0);">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked>
+            <i class="fa fa-twitter fa-lg"></i>
+            <b>Twitter</b>
+          </label>
+          <label class="btn btn-primary" onclick="javascript:$('#badgeCarousel').carousel(1);">
+            <input type="radio" name="options" id="option1" autocomplete="off">
+            <i class="fa fa-facebook fa-lg"></i>
+            <b>Facebook</b>
+          </label>
+          <label class="btn btn-primary" onclick="javascript:$('#badgeCarousel').carousel(2);">
+            <input type="radio" name="options" id="option1" autocomplete="off">
+            <i class="fa fa-wordpress fa-lg"></i>
+            <b>Gravatar</b>
+          </label>
+        </div>
+        
+        <hr style="width: 50%; margin: 20px auto;"/>
+        
+        <div id="badgeCarousel" class="carousel slide">
+          <div class="carousel-inner">
+
+            <div class="active item">
+              <h3 style="line-height:100%; margin-top: 0; margin-bottom: 15px;">Twitter Connect</h3>
+              <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <div class="input-group" id="twitter-name" style="margin-bottom: 10px;">
+                    <span class="input-group-addon">@</span>
+                    <input class="form-control tw_uname" id="prependedInput" type="text" placeholder="Username">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" onclick="javascript:get_twitter();" type="button">Go!</button>
+                    </span>
+                  </div> <!-- /.input-group -->
+                </div> <!-- /.col-sm-6 -->
+              </div> <!-- /.row -->
+            </div> <!-- /.item -->
+
+            <div class="item">
+              <h3 style="line-height:100%; margin-top: 0; margin-bottom: 15px;">Facebook Connect</h3>
+              <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <div class="input-group" id="fb-name" style="margin-bottom: 10px;">
+                    <span class="input-group-addon">fb.com/</span>
+                    <input class="form-control fb_uname" id="prependedInput" type="text" placeholder="Username">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" onclick="javascript:get_facebook();" type="button">Go!</button>
+                    </span>
+                  </div> <!-- /.input-group -->
+                </div> <!-- /.col-sm-6 -->
+              </div> <!-- /.row -->
+            </div> <!-- /.item -->
+
+            <div class="item">
+              <h3 style="line-height:100%; margin-top: 0; margin-bottom: 15px;">Gravatar</h3>
+              <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <div class="input-group" id="fb-name" style="margin-bottom: 10px;">
+                    <span class="input-group-addon">Email Address:</span>
+                    <input class="form-control gr_uname" id="prependedInput" type="text" placeholder="john@example.com">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" onclick="javascript:get_gravatar();" type="button">Go!</button>
+                    </span>
+                  </div> <!-- /.input-group -->
+                </div> <!-- /.col-sm-6 -->
+              </div> <!-- /.row -->
+            </div> <!-- /.item -->
+
+          </div> <!-- /.carousel-inner -->
+        </div> <!-- /.carousel -->
+
+        <br/>
+
+        <p class="text-center">
+          <a href="javascript:downloadProfilePic();" class="btn btn-success btn-lg">Download Profile Picture <i class="fa fa-download fa-lg"></i></a>
+        </p>
+
+      </div> <!-- /.well -->
+
+    </div> <!-- /.col-md-10 -->
+  </div> <!-- /.row -->
+    
+</div> <!-- /badge -->
+
+<form id="invisible_form" action="http://nimeregister.on.co.ke/imgdown.php" method="post" target="_blank">
+  <input id="new_window_parameter_1" name="img_dwn" type="hidden" value="default">
+</form>
+

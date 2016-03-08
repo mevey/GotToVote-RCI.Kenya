@@ -11,6 +11,8 @@ google_analytics: 'UA-36749298-1'
 
 openafrica_url: 'http://africaopendata.org/dataset/voter-registration-2016'
 
+nimeregister_api: 'http://gtv.nimeregister'
+
 # ------------------------------------------------------------------------------
 # Jekyll Config
 
