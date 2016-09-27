@@ -5,7 +5,8 @@ election_year: "2017"
 registration_end_date: "-"
 
 api_key: "AIzaSyAwvkIls5mQybyp2R3g4FGiVetNdeVjUeE"
-table_id: "1CSlnHwpe8qTpBAoSiwZAAH7PVbV0w9kRkvUypmXP"
+# table_id: "1CSlnHwpe8qTpBAoSiwZAAH7PVbV0w9kRkvUypmXP"
+table_id: "1Z8E12VbKZNAbiAsBBBgEcb3CiuIqDyaa-cdXQLq9"
 
 url: https://kenya.gottovote.cc
 enforce_ssl: kenya.gottovote.cc

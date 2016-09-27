@@ -45,7 +45,7 @@ county_sel.onchange = function () {
       county_sel.remove(0);
     }
     const_sel.innerHTML = "<option value=\"0\">Loading Constituencies... </option>";
-    ward_sel.innerHTML = "<option value=\"0\">Loading Wards...</option>";
+//    ward_sel.innerHTML = "<option value=\"0\">Loading Wards...</option>";
 
     header_name.innerHTML = unescape(toTitleCase(escape(county_sel.options[county_sel.selectedIndex].innerHTML))) + " Region";
 
@@ -120,10 +120,10 @@ const_sel.onchange = function () {
       }
     }
 
-    ward_sel.innerHTML = "";
-    for (var i = 0; i < ward_code.length; i++) {
-      ward_sel.innerHTML += "<option value=\"" + ward_code[i] + "\">" + toTitleCase(ward_name[i]) + "</option>";
-    }
+//    ward_sel.innerHTML = "";
+//    for (var i = 0; i < ward_code.length; i++) {
+//      ward_sel.innerHTML += "<option value=\"" + ward_code[i] + "\">" + toTitleCase(ward_name[i]) + "</option>";
+//    }
 
     $("#reg-centres").html("");
     for (var i = 0; i < ward_reg_code.length; i++) {
@@ -140,53 +140,53 @@ const_sel.onchange = function () {
   }
 };
 
-ward_sel.onchange = function () {
-  if (const_sel.value == 0) {
-    //Do Nothing. No County Selected.
-  } else {
-    var del_no = ward_reg_code.length;
-    for (var i = 0; i < del_no; i++) {
-      ward_reg_code.pop();
-      ward_reg_name.pop();
-    }
-    del_no = centre_code.length;
-    for (var i = 0; i < del_no; i++) {
-      centre_code.pop();
-      centre_name.pop();
-    }
-
-    for (var i = 0; i < json_result.rows.length; i++) {
-      if (json_result.rows[i][5] == ward_sel.value) {
-        var ward_reg_already = 0;
-        for (var c = 0; c < ward_reg_code.length; c++) {
-          if (ward_reg_code[c] == json_result.rows[i][7]) {
-            ward_reg_already = 1;
-          }
-        }
-        if (ward_reg_already == 0) {
-          ward_reg_code[ward_reg_code.length] = json_result.rows[i][7];
-          ward_reg_name[ward_reg_code.length - 1] = json_result.rows[i][8];
-        }
-
-        centre_code[centre_code.length] = json_result.rows[i][0];
-        centre_name[centre_code.length - 1] = json_result.rows[i][9];
-      }
-    }
-
-    $("#reg-centres").html("");
-    for (var i = 0; i < ward_reg_code.length; i++) {
-      $("#reg-centres").html($("#reg-centres").html() +
-          "<tr><td><p>" + toTitleCase(ward_reg_name[i]) + "</p></td></tr>");
-    }
-    // $("#other-centres").html("");
-    // for (var i = 0; i < centre_code.length; i++) {
-    //   $("#other-centres").html($("#other-centres").html() +
-    //       "<tr><td><p>" + toTitleCase(centre_name[i]) + "</p></td></tr>");
-    // }
-
-    header_name.innerHTML = unescape(toTitleCase(escape(ward_sel.options[ward_sel.selectedIndex].text))) + " Ward";
-  }
-};
+//ward_sel.onchange = function () {
+//  if (const_sel.value == 0) {
+//    //Do Nothing. No County Selected.
+//  } else {
+//    var del_no = ward_reg_code.length;
+//    for (var i = 0; i < del_no; i++) {
+//      ward_reg_code.pop();
+//      ward_reg_name.pop();
+//    }
+//    del_no = centre_code.length;
+//    for (var i = 0; i < del_no; i++) {
+//      centre_code.pop();
+//      centre_name.pop();
+//    }
+//
+//    for (var i = 0; i < json_result.rows.length; i++) {
+//      if (json_result.rows[i][5] == ward_sel.value) {
+//        var ward_reg_already = 0;
+//        for (var c = 0; c < ward_reg_code.length; c++) {
+//          if (ward_reg_code[c] == json_result.rows[i][7]) {
+//            ward_reg_already = 1;
+//          }
+//        }
+//        if (ward_reg_already == 0) {
+//          ward_reg_code[ward_reg_code.length] = json_result.rows[i][7];
+//          ward_reg_name[ward_reg_code.length - 1] = json_result.rows[i][8];
+//        }
+//
+//        centre_code[centre_code.length] = json_result.rows[i][0];
+//        centre_name[centre_code.length - 1] = json_result.rows[i][9];
+//      }
+//    }
+//
+//    $("#reg-centres").html("");
+//    for (var i = 0; i < ward_reg_code.length; i++) {
+//      $("#reg-centres").html($("#reg-centres").html() +
+//          "<tr><td><p>" + toTitleCase(ward_reg_name[i]) + "</p></td></tr>");
+//    }
+//    // $("#other-centres").html("");
+//    // for (var i = 0; i < centre_code.length; i++) {
+//    //   $("#other-centres").html($("#other-centres").html() +
+//    //       "<tr><td><p>" + toTitleCase(centre_name[i]) + "</p></td></tr>");
+//    // }
+//
+//    header_name.innerHTML = unescape(toTitleCase(escape(ward_sel.options[ward_sel.selectedIndex].text))) + " Ward";
+//  }
+//};
 
 
 // Fusion Table Script
@@ -292,10 +292,10 @@ function run_get_centres(table_id) {
       for (var i = 0; i < const_code.length; i++) {
         const_sel.innerHTML += "<option value=\"" + const_code[i] + "\">" + toTitleCase(const_name[i]) + "</option>";
       }
-      ward_sel.innerHTML = "";
-      for (var i = 0; i < ward_code.length; i++) {
-        ward_sel.innerHTML += "<option value=\"" + ward_code[i] + "\">" + toTitleCase(ward_name[i]) + "</option>";
-      }
+//      ward_sel.innerHTML = "";
+//      for (var i = 0; i < ward_code.length; i++) {
+//        ward_sel.innerHTML += "<option value=\"" + ward_code[i] + "\">" + toTitleCase(ward_name[i]) + "</option>";
+//      }
 
       $("#reg-centres").html("");
       for (var i = 0; i < ward_reg_code.length; i++) {
@@ -303,7 +303,8 @@ function run_get_centres(table_id) {
             "<tr><td><p>" + toTitleCase(ward_reg_name[i]) + "</p></td></tr>");
       }
 
-      header_name.innerHTML = unescape(toTitleCase(escape(ward_name[0]))) + " Ward";
+//      header_name.innerHTML = unescape(toTitleCase(escape(ward_name[0]))) + " Ward";
+      header_name.innerHTML = unescape(toTitleCase(escape(const_name[0]))) + " Constituency";
 
     }
   };
